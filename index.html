@@ -1,0 +1,137 @@
+<!--
+
+Assignment Criteria
+
+For the final assignment, you must submit at least 3 files - an HTML file, a CSS file and a Javascript file that meet the following criteria:
+
+1) Navbar with 3 links (the links can point to any valid address). - 5pts 
+
+2) All HTML files validating based on the W3 Validator (link below) - 2pts
+
+3) Contains HTML, Body, Head and Title tags -  2pts
+
+4) Contains an HTML5 doctype declaration -  2pt
+
+5) Proper use of the @font-face directive - 4pts
+
+6) Media query for mobile phones larger than 400px - 5pts
+
+7) Media query for devices such as tablets, larger than 550px - 5pts
+
+8) Media query for all large devices, larger than 750px - 5pts
+
+9) Manipulate the background-color property based on screen size (feel free to use one of the media queries above) - 3pts
+
+10) Create an HTML Table with at least 3 rows - 3pts
+
+11) Use the :nth-child pseudo-selector to change the background color of every odd-numbered row - 4pts
+
+12) Link to an external javascript file  - 5pts
+
+13) Declare a variable and assign it a string - 5pts
+
+ https://validator.w3.org/
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="UCLA Classes">
+    <!-- Setting The Viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500;700&display=swap" rel="stylesheet">
+    <link href="indexStyle.css" rel="stylesheet" type="text/css">
+    <script src="indexJavaScript.js" type="text/javascript"></script>
+    <title>Class webpage</title>
+</head>
+
+<body>
+    <nav class="navigation-bar">
+        <div class="navigation-bar__icon-wrapper">
+            <a
+                class="fas fa-hamburger navigation-bar__icon"
+                onClick="onMenuBurgerClick()"
+            ></a>
+        </div>
+        <div class="navigation-bar__item-list" id="main-navigation">
+            <a class="navigation-bar__item" href="https://www.uclaextension.edu/">Home</a>
+            <a class="navigation-bar__item"
+                href="https://www.uclaextension.edu/digital-technology/programming/course/html-and-css-com-sci-x-418102ab">HTML
+                and CSS course</a>
+            <a class="navigation-bar__item"
+                href="https://www.uclaextension.edu/digital-technology/programming/course/java-programming-i-com-sci-x-41885a">Java
+                1 course</a>
+            <a class="navigation-bar__item"
+                href="https://www.uclaextension.edu/digital-technology/programming/course/javascript-com-sci-x-41888b?method=load&courseId=160066">Javascript
+                course</a>
+            <a class="navigation-bar__item"
+                href="https://www.uclaextension.edu/digital-technology/programming/course/introduction-sql-com-sci-x-41461">SQL
+                course</a>
+        </div>
+    </nav>
+    <section class="title-wrapper">
+        <h1 class="title-wrapper__main-title">Welcome to my schedule page</h1>
+    </section>
+    <section class="schedule-table-wrapper">
+        <h3 class="schedule-table-wrapper__title">Meeting time</h3>
+        <table class="schedule-table-wrapper__table">
+            <thead class="schedule-table-wrapper__table-head">
+                <tr class="schedule-table-wrapper__table-row schedule-table-wrapper__table-header-row">
+                    <th class="schedule-table-wrapper__table-cell schedule-table-wrapper__table-header-cell"> List of students </th>
+                    <th class="schedule-table-wrapper__table-cell schedule-table-wrapper__table-header-cell">Intro to SQL</th>
+                    <th class="schedule-table-wrapper__table-cell schedule-table-wrapper__table-header-cell">HTML and CSS</th>
+                    <th class="schedule-table-wrapper__table-cell schedule-table-wrapper__table-header-cell">Java 1</th>
+                    <th class="schedule-table-wrapper__table-cell schedule-table-wrapper__table-header-cell">Javascript</th>
+                    <th class="schedule-table-wrapper__table-cell schedule-table-wrapper__table-header-cell"> Note</th>
+                </tr>
+            </thead>
+            <tbody class="schedule-table-wrapper__table-body">
+                <tr class="schedule-table-wrapper__table-row">
+                    <td class="schedule-table-wrapper__table-cell">Student A</td>
+
+                    <td class="schedule-table-wrapper__table-cell">Monday 8:30&nbsp;pm</td>
+                    <td class="schedule-table-wrapper__table-cell">Monday 2:00&nbsp;pm</td>
+                    <td class="schedule-table-wrapper__table-cell">Tuesday 7:00&nbsp;am</td>
+                    <td class="schedule-table-wrapper__table-cell">Tuesday 5:00&nbsp;pm</td>
+                    <td class="schedule-table-wrapper__table-cell">
+                        <p>Internation Student who need an i-20 and visa for admission</p>
+                    </td>
+                </tr>
+                <tr class="schedule-table-wrapper__table-row">
+                    <td class="schedule-table-wrapper__table-cell">Student B</td>
+                    <td class="schedule-table-wrapper__table-cell">Wednesday 7:00&nbsp;am</td>
+                    <td class="schedule-table-wrapper__table-cell">Wednesday 5:00&nbsp;pm</td>
+                    <td class="schedule-table-wrapper__table-cell">Thursday 9:00&nbsp;am</td>
+                    <td class="schedule-table-wrapper__table-cell">Thursday 4:00&nbsp;pm</td>
+                    <td class="schedule-table-wrapper__table-cell">
+                        <p>Out-of-state student who pay as sama as international student</p>
+                    </td>
+                </tr>
+                <tr class="schedule-table-wrapper__table-row">
+                    <td class="schedule-table-wrapper__table-cell">Student C</td>
+                    <td class="schedule-table-wrapper__table-cell">Friday 7:00&nbsp;am</td>
+                    <td class="schedule-table-wrapper__table-cell">Friday 5:00&nbsp;pm</td>
+                    <td class="schedule-table-wrapper__table-cell">Saturday 9:00&nbsp;am</td>
+                    <td class="schedule-table-wrapper__table-cell">Saturday 4:00&nbsp;pm</td>
+                    <td class="schedule-table-wrapper__table-cell">
+                        <p> In-state student with $40/credit </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    <footer class="footer">
+        <!-- space in URL link: replace to %20-->
+        <p class="footer__text">For any questions, please <a href="mailto:truc.milky@gmail.com?subject=Quick%20question">email me</a>
+        </p>
+
+    </footer>
+</body>
+<!--command + "/?" =>comment
+    command + shift + "P" => shortcut list-->
+
+</html>

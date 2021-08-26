@@ -1,0 +1,143 @@
+:root {
+  --table-bg-color: lightsalmon;
+  --default-body-bg-color: #E6B0AA;
+  --small-body-bg-color: #F9EBEA;
+  --medium-body-bg-color: #FDEDEC;
+  --large-body-bg-color: whitesmoke;
+  --default-table-odd-cell: #FADBD8;
+}
+
+* {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 16px;
+}
+
+body {
+  background-color: var(--default-body-bg-color);
+}
+
+.navigation-bar {
+  display: flex;
+  flex-direction: column;
+}
+
+.navigation-bar__icon-wrapper {
+  text-align: end;
+}
+
+.navigation-bar__icon {
+  font-size: 1.75rem;
+}
+
+.navigation-bar__item-list {
+  display: none;
+}
+
+.navigation-bar__item-list--show {
+  display: flex;
+  flex-direction: column;
+}
+
+.navigation-bar__item {
+  font-weight: 1000;
+  text-decoration: none;
+  color: #641E16;
+}
+
+.navigation-bar__item:hover {
+  color: red;
+}
+
+.title-wrapper__main-title {
+  color: #7B241C;
+  font-size: 2rem;
+  font-weight: 900;
+  text-transform: capitalize;
+  text-align: center;
+}
+
+.schedule-table-wrapper {
+  overflow-x: auto;
+
+}
+
+.schedule-table-wrapper__title {
+  color: #C0392B;
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  text-align: center;
+  font-weight: 1000;
+}
+
+.schedule-table-wrapper__table-header-cell {
+  background-color: var(--table-bg-color);
+  font-weight: 900;
+  padding: 1.5rem;
+}
+
+.schedule-table-wrapper__table-body {
+  text-align: center;
+}
+
+.schedule-table-wrapper__table-body tr:nth-child(odd) {
+  background:var(--default-table-odd-cell);
+};
+
+
+.schedule-table-wrapper__table-header-cell,
+.schedule-table-wrapper__table-cell {
+  text-align: center;
+  border-bottom: 0.1rem solid #ddd;
+}
+
+
+
+
+/* Media query for mobile phones larger than 400px */
+@media (min-width: 400px) {
+  body {
+    background-color: var(--small-body-bg-color);
+  }
+}
+
+/* Media query for devices such as tablets, larger than 550px*/
+@media (min-width: 550px) {
+  body {
+    background-color: var(--medium-body-bg-color);
+  }
+
+  .schedule-table-wrapper__table {
+    margin: auto;
+  }
+
+  .footer__text {
+    text-align: center;
+  }
+}
+
+
+/* Medium devices (landscape tablets, 750px and up) */
+@media (min-width: 750px) {
+  body {
+    background-color: var(--large-body-bg-color);
+  }
+
+  .navigation-bar {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .navigation-bar__icon-wrapper {
+    display: none;
+  }
+
+  .navigation-bar__item-list {
+    display: flex;
+  }
+
+  .navigation-bar__item {
+    margin-right: 1rem;
+    margin-left: 1rem;
+  }
+
+}
